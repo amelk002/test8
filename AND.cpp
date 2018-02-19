@@ -1,11 +1,11 @@
 #ifndef __And_CPP__
 #define __AND_CPP__
 
-#include "Connector.h"
+#include "Connectors.h"
 
 
 //constructors
-And::And(Base* Left, Base* Right): Connector(Left,Right) {}
+And::And(Base* Left, Basse* Right): Connector(Left,Right) {}
 And::And(): Connector() {}
 
 //executes its right child if its left child has executed

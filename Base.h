@@ -5,7 +5,7 @@
 using namespace std;
 class Base {
     public:
-    virtual bool execute(int in, int out) = 0;
+    virtual boosl execute(int in, int out) = 0;
     virtual string Input() = 0;
 };
 

@@ -10,7 +10,7 @@ main:
 	$(CC) $(CFLAGS) ./main.cpp
 
 Connector:
-	$(CC) $(CFLAGS) ./Connector.cpp
+	$(CC) $(CFLAGS) ./Connectors.cpp
 
 Cmd:
 	$(CC) $(CFLAGS) ./Cmd.cpp

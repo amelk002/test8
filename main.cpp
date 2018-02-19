@@ -425,15 +425,15 @@ Base* grabTree(char *cstr) {
             //Check what the connector is and create a object respectively
             //and push it to the completedListToRun
             if(temp == AND_STRING) {
-                AND *n = new AND(Left, Right);
+                And *n = new And(Left, Right);
                 completedListToRun.push(n);
             }
             else if(temp == OR_STRING) {
-                OR *n = new OR(Left, Right);
+                Or *n = new Or(Left, Right);
                 completedListToRun.push(n);
             }
             else if(temp == SEMI_STRING) {
-                Semicolon *n = new Semicolon(Left, Right);
+                Semi *n = new Semi(Left, Right);
                 completedListToRun.push(n);
             }
 
@@ -453,15 +453,15 @@ Base* grabTree(char *cstr) {
                 char *temp2 = connectorList.front();
                 connectorList.pop();
                 if(temp2 == AND_STRING) {
-                    AND *n = new AND(tempLeft, Right);
+                    And *n = new And(tempLeft, Right);
                     completedListToRun.push(n);
                 }
                 else if(temp2 == OR_STRING) {
-                    OR *n = new OR(tempLeft, Right);
+                    Or *n = new Or(tempLeft, Right);
                     completedListToRun.push(n);
                 }
                 else if(temp2 == SEMI_STRING) {
-                    Semicolon *n = new Semicolon(tempLeft, Right);
+                    Semi *n = new Semi(tempLeft, Right);
                     completedListToRun.push(n);
                 }
             }
@@ -893,15 +893,15 @@ int main(int argc, char**argv) {
                 connectors.pop();
 
                 if(temp == AND_STRING) {
-                    AND *n = new AND(Left, Right);
+                    And *n = new And(Left, Right);
                     completedListToRun.push(n);
                 }
                 else if(temp == OR_STRING) {
-                    OR *n = new OR(Left, Right);
+                    Or *n = new Or(Left, Right);
                     completedListToRun.push(n);
                 }
                 else if(temp == SEMI_STRING) {
-                    Semicolon *n = new Semicolon(Left, Right);
+                    Semi *n = new Semi(Left, Right);
                     completedListToRun.push(n);
                 }
                 while(connectors.size() > 0) {
@@ -914,15 +914,15 @@ int main(int argc, char**argv) {
                     connectors.pop();
 
                     if(temp2 == AND_STRING) {
-                        AND *n = new AND(tempLeft, Right);
+                        And *n = new And(tempLeft, Right);
                         completedListToRun.push(n);
                     }
                     else if(temp2 == OR_STRING) {
-                        OR *n = new OR(tempLeft, Right);
+                        Or *n = new Or(tempLeft, Right);
                         completedListToRun.push(n);
                     }
                     else if(temp2 == SEMI_STRING) {
-                        Semicolon *n = new Semicolon(tempLeft, Right);
+                        Semi *n = new Semi(tempLeft, Right);
                         completedListToRun.push(n);
                     }
 

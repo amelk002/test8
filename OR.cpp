@@ -1,18 +1,17 @@
-#ifndef __OR_CPP__
-#define __OR_CPP__
+#ifndef __Or_CPP__
+#define __Or_CPP__
 
-#include "Connector.h"
-#include "OR.h"
+#include "Connectors.h"
 
 //Constructors
-OR::OR(Base* lhs, Base* Right): Connector(lhs,Right) {}
-OR::OR(): Connector() {}
+Or::Or(Base* Left, Base* Right): Connector(Left,Right) {}
+Or::Or(): Connector() {}
 
 //executes its right child if its left child has executed
 //returns true if both children execute successfully
 //otherwise returns false
-bool OR::execute(int in, int out) {
-    if(!lhs->execute(in,out)) {
+bool Or::execute(int in, int out) {
+    if(!Left->execute(in,out)) {
         if(Right->execute(in,out)) {
             return true;
         }

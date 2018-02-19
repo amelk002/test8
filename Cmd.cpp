@@ -16,7 +16,7 @@ using namespace std;
 #include "Base.h"
 #include "Cmd.h"
 
-//constructors
+
 Cmd::Cmd(char* command, queue<char *> flags) {
     this->command = command;
     this->flags = flags;
